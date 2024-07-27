@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "FZjsgeDoL97fipTqTDXSyNmEnjd0n34nLiuXuseFpKQdcogfgfifUEECmDlBHbWDIlQfpGfTFqDs7bjo8MiqMA==",
+  "dgSpecHash": "34szo5wopDoUzX1KVH9hq3ryWypwv8K7fE2Y5dVkYAQshcSsKyZPrc2GBeYGwW6KR8D5LK3jL2rXmm51xV1O2A==",
   "success": true,
   "projectFilePath": "/home/tenno/Programming/cli-noise/cli-noise.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/tenno/.nuget/packages/simplexnoise/2.0.0/simplexnoise.2.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
