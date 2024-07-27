@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("cli-noise")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+24a18fb14e68c4d8c0c6bc6a19c90440047b9640")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ed9dcd1194745131347ded8a174b082b9e40dcf7")]
 [assembly: System.Reflection.AssemblyProductAttribute("cli-noise")]
 [assembly: System.Reflection.AssemblyTitleAttribute("cli-noise")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
