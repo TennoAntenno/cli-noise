@@ -8,9 +8,9 @@ Display a simplex noise animation in your terminal
 	- [x] Scaling
 	- [x] ASCII symbols
 	- [x] Thresholds for each character
+- [X] Centered custom text
 
 ## TO:DO:
-- [ ] Centered custom text
 - [ ] ASCII art support
 - [ ] Separate color for each symbol
 
