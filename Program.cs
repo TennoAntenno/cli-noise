@@ -5,6 +5,21 @@ class Program
 {
     static void Main(string[] args)
     {
+        Console.Clear();
+        Console.Write("Would you like to add text? [Y/n] ");
+        bool usingText = false;
+        if (Console.ReadKey().Key == ConsoleKey.Y)
+            usingText = true;
+        if (Console.ReadKey().Key == ConsoleKey.N)
+            usingText = false;
+        string text = "";
+        if (usingText)
+        {
+            Console.Clear();
+            Console.Write("Text: ");
+            text = Console.ReadLine();
+        }
+
         Random rand = new Random();
         SimplexNoise.Noise.Seed = rand.Next(0,999999);
 
@@ -102,29 +117,36 @@ class Program
                 result += "\n";
                 for (int x = 0; x < width; x++)
                 {
-                    float noise = SimplexNoise.Noise.CalcPixel3D(x,y,z,scale);
-                    switch (noise)
+                    if (usingText && y == height/2 && text.Length % 2 == 0 && x >= (width/2) - (text.Length/2) && x < (width/2) + (text.Length/2))
+                        result += text[x - (width/2) + (text.Length/2)] + " ";
+                    else if (usingText && y == height/2 && text.Length % 2 == 1 && x >= (width/2) - (text.Length/2) && x <= (width/2) + (text.Length/2))
+                        result += text[x - (width/2) + (text.Length/2)] + " ";
+                    else
                     {
-                        case float value when value < max_threshold: 
-                            result += max_symbol;
-                            result += max_symbol;
-                            break;
-                        case float value when value < mid_threshold:
-                            result += mid_symbol;
-                            result += mid_symbol;
-                            break;
-                        case float value when value < partial_threshold:
-                            result += partial_symbol;
-                            result += partial_symbol;
-                            break;
-                        case float value when value < min_threshold:
-                            result += min_symbol;
-                            result += min_symbol;
-                            break;
-                        default:
-                            result += empty_symbol;
-                            result += empty_symbol;
-                            break;
+                        float noise = SimplexNoise.Noise.CalcPixel3D(x,y,z,scale);
+                        switch (noise)
+                        {
+                            case float value when value < max_threshold: 
+                                result += max_symbol;
+                                result += max_symbol;
+                                break;
+                            case float value when value < mid_threshold:
+                                result += mid_symbol;
+                                result += mid_symbol;
+                                break;
+                            case float value when value < partial_threshold:
+                                result += partial_symbol;
+                                result += partial_symbol;
+                                break;
+                            case float value when value < min_threshold:
+                                result += min_symbol;
+                                result += min_symbol;
+                                break;
+                            default:
+                                result += empty_symbol;
+                                result += empty_symbol;
+                                break;
+                        }
                     }
                 }
             }
